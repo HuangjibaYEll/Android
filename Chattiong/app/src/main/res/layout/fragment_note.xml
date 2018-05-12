@@ -1,0 +1,84 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:infiniteCard="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragment.LayoutManager.NoteFragment">
+
+    <data>
+
+        <variable
+            name="NoteDate"
+            type="com.example.administrator.chattiong.Bean.NoteDate" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f4f4"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_card_note" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/frameLayout"
+            android:padding="15dp"
+            android:textColor="#262626"
+            android:text="@{NoteDate.date}"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:id="@+id/textView5" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+            <TextView
+                android:id="@+id/NoteContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:padding="20dp"
+                android:text="@{NoteDate.content}" />
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <ImageView
+            android:id="@+id/NoteImg"
+            android:layout_width="match_parent"
+            android:layout_height="193dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:alpha="77"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{NoteDate.imgUrl}" />
+    </RelativeLayout>
+
+
+</layout>

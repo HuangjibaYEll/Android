@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+       >
+    <data>
+        <variable
+            name="News"
+            type="com.example.administrator.chattiong.Bean.News"
+        />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:onClick="@{News.DetailNews}">
+    
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="@{News.title}"
+        />
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:imageUrl="@{News.ImgUrl}"
+        />
+</LinearLayout>
+</layout>

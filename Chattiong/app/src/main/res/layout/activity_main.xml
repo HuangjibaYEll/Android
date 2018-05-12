@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.administrator.chattiong.MainActivity"
+    android:weightSum="1">
+
+    <include
+        layout="@layout/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:orientation="vertical"/>
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_layout"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/news">
+
+
+        <RadioButton
+            android:id="@+id/news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/drawer_radio"
+            android:gravity="center"
+            android:text="@string/news"
+            android:textSize="15sp"
+            android:textColor="@drawable/text_radio"
+            />
+
+        <RadioButton
+            android:id="@+id/map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/map_radio"
+            android:gravity="center"
+            android:text="@string/map"
+            android:textSize="15sp"
+            android:textColor="@drawable/text_radio"
+            />
+
+        <RadioButton
+            android:id="@+id/note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/note_radio"
+            android:gravity="center"
+            android:text="@string/note"
+            android:textSize="15sp"
+            android:textColor="@drawable/text_radio"
+            />
+
+
+        <RadioButton
+            android:id="@+id/myself"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/myself_radio"
+            android:gravity="center"
+            android:text="@string/myself"
+            android:textSize="15sp"
+            android:textColor="@drawable/text_radio"
+            />
+
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
